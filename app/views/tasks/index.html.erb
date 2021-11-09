@@ -1,4 +1,9 @@
 <h1>My tasks</h1>
 <% @tasks.each do |task| %>
-<p><%= link_to task.title, task_path(task.id) %></p>
+<p><%= link_to task.title, task_path(task.id) %>
+<%= link_to "Delete",
+            task_destroy_path(task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></p>
 <% end %>
+<p><%= link_to "+ Ajouter une tâche", task_new_path %></p>

@@ -1,3 +1,4 @@
 <%= @task.title%>
 <%= @task.details %>
 <p><%= link_to "Retour", tasks_path %></p>
+<p><%= link_to "Edit", task_edit_path(@task) %></p>
